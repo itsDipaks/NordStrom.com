@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Styles/navbarforall.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="Styles/navbarforall.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');
@@ -20,8 +20,7 @@
             padding-top: 5px;
             margin: auto;
             position: relative;
-            top: 60px;
-            /* text-align: center; */
+            top: 30px;
         }
         #basicForm{
             border: 0px solid rgb(21, 19, 19);
@@ -49,61 +48,57 @@
         }
         h2{
             text-align: center;
-            margin-top: 5px;
             font-size: 25px;
             margin-bottom: 0px;
             text-decoration: underline;
         }
         #button{
             height: 35px;
-            /* border: 1px solid rgb(255, 0, 0); */
         }
-        /* #categoriesdiv {
-     display: none;
-    } */
+
     #middlediv {
-      height: 50%;
+      height: 100%;
       width: 95%;
       margin: auto;
       border-bottom: 1px solid black;
-      /* display: flex; */
-      
       justify-content: space-evenly;
       align-items: center;
-      
-      /* padding: 0px 10px 0px 10px; */
     }
-    nav {
-    
-      height: 50px;
-      position: fixed;
-      margin-top: 10px;
 
     
-    }
-    #middlediv{
-      height: 100%;
-      display: block;
-    }
     p{
      position: relative;
-     top: 60px;
      font-size: 20px;
      font-family: 'Roboto', sans-serif;
    text-align: center;
    color: rgb(130, 10, 10);
    margin-bottom: 20px;
-     /* text-align: center; */
- 
-    }
+     }
     p>span{
       font-size: 50px;
       font-family: 'Caveat', cursive;
     }
+    #navbar{
+        height: 70px;
+    }
+    #logo{
+        height: 50%;
+        width: 20%;
+    }
+
     </style>
 </head>
 <body>
-    <nav id="navbar"></nav>
+    <div id="navbar">
+        <div id="middlediv">
+            <div id="logo">
+              <img
+                src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg"
+                alt=""/>
+            </div>
+             </div> 
+            </div>
+           
     <p>Welcome To <span>NordstroM.com....</span></p>
     <div id = "container">
         <h2>SignUp/Create Account</h2>
@@ -140,10 +135,11 @@
         
 </body>
 
-<script type="module">
+<script >
 
-import { navbarlog } from "../Components/navbar.js";
-document.getElementById("navbar").innerHTML =navbarlog();
+// import { navbar, navbarlog } from "../Components/navbar.js";
+
+// document.getElementById("navbar").innerHTML =navbarlog();
 
     document.querySelector("#basicForm").addEventListener("submit", registrationData);
 
