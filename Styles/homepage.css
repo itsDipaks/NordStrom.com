@@ -1,0 +1,113 @@
+body{
+    
+      margin: auto;
+      font-family:  Brandon Text,Arial,sans-serif;
+}
+#homepage{
+      /* width: 96%; */
+      margin: auto;
+      width: 90%;
+      position: relative;
+      top:200px ;
+}
+#homepage>img{
+      width: 100%;
+      margin-bottom: 20px;
+         
+
+}
+#col>img{
+      width: 100%;
+      margin-bottom: -10px;
+}
+#col2{
+
+      text-align: center;
+      background-color: rgb(242, 242, 242);
+      height: 140px;
+      padding-top: 50px;
+      margin-top: 0px;
+      
+      align-items: center;
+}
+#col2>p{
+      font-size: 20px;
+      margin-bottom: 20px;
+}
+#btnh>button{
+      width: 15%;
+      height: 70px;
+      font-size: 20px;
+}
+#homepage>h2 {
+      text-align: center;
+      margin: 30px 0px 30px 0px;
+}
+#p{
+     font-size: 14px;
+     margin-bottom: 50px;
+      text-align: center;
+}
+#divbox1{
+      display: flex;
+      width: 100%;
+}
+#divbox1>div{
+      width: 30%;
+      margin: auto;
+}
+#divbox1>div>img{
+      width: 100%;
+      height: 100%;
+}
+#pride{
+      height: 450px;
+}
+#redbox{
+      display: flex;
+      border: 1px solid #000;
+      margin-bottom: 50px;
+
+}
+#redbox>img{
+      width: 100%;
+      height: 450px;
+}
+h1{
+      text-align: center;
+      margin: 50px 0px 40px 0px;
+}
+/* hr{
+      margin: 50px 0px 50px 0px;
+} */
+#optionsdiv{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+}
+
+#optionsdiv>div{
+      width: 16%;
+      text-align: center;
+}
+#optionsdiv>div>img{
+
+      width: 100%;
+}
+#currentlyloving{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+}
+#currentlyloving>div{
+      width: 24%;
+
+}
+#currentlyloving>div>img{
+      width: 100%;
+}
+#homepage>p{
+      text-align: center;
+      margin-bottom: 20px;
+}
