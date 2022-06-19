@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        #site{
+            position: absolute;
+            left: 170px;
+            top: 30px;
+        }
+        #check_page{
+            display: flex;
+            margin-top: 100px;
+        }
+        #pic_box{
+            margin-left: -20px;
+        }
+        #basket{
+            
+            width: 40%;
+            margin-left: 20%;
+            
+        }
+        
+        
+        #continue{
+            padding: 10px 120px;
+            font-weight: bold;
+            color: white;
+            background-color: #393939;
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+        }
+        
+        #order{
+            width: 19%;
+            
+            background-color: #E3E3E3;
+            padding: 10px;
+        }
+        #logo_head{
+            display: flex;
+        }
+        #pic2_box{
+           width: 15%;
+        }
+        #pic2{
+            width: 100%;
+        }
+        #logo_head>p{
+            
+            margin-top: 0px;
+            margin-left: 10px;
+            font-size: 25px;
+            font-family: sans-serif;
+            color: #393939;
+        }
+        .list{
+            display: flex;
+            justify-content: space-between;
+        }
+        #final1,#final2{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin-top: 0px;
+        }
+        #continue:hover{
+            background-color: black;
+        }
+        #atm_card{
+            width: 50%;
+            height: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+        #atm{
+            width: 50%;
+            display: flex;
+            margin-bottom: 30px;
+        }
+        #atm>input{
+            display: block;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+        #last{
+            margin-left: 32px;
+        }
+        #hr1{
+            width: 91%;
+            margin-left: 0px;
+            color:#E3E3E3;
+        }
+    </style>
+</head>
+<body>
+    <img id="site" src="./cart images/site_logo.jpg" alt="">
+    <div id="check_page">
+    <div id="basket">
+        <div id="pic_box">
+            <img src="./cart images/head_checkout.jpg" alt="">
+        </div>
+        <p>DELIVERY ADDRESS:</p>
+        <div id="addr"></div>
+        <hr id="hr1">
+        <div><img src="./cart images/payment_bar.jpg" alt=""></div>
+        <p>Credit Card/Debit Card</p>
+        <input id="atm_card" type="number" placeholder="Card Number">
+        <div id="atm">
+            <input type="text" placeholder="MM/YY">
+            <input id="last" type="text" placeholder="Security Code">
+        </div>
+        <button id="continue">Place Order >></button>
+        
+    </div>
+    <div id="order">
+        <div id="logo_head">
+        <div id="pic2_box">
+            <img id="pic2" src="./cart images/cart_icon.jpg" alt="">
+        </div>
+        <p>Your Order</p>
+        </div>
+        <button id="continue">Place Order >></button>
+        <div class="list">
+            <p>Items</p>
+            <p class="total"></p>
+        </div>
+        <div class="list">
+            <p id="final1">Total</p>
+            <p id="final2"></p>
+        </div
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    let tp=JSON.parse(localStorage.getItem("Total Price"));
+    document.querySelector(".total").innerText=`₹${tp}`;
+    document.querySelector("#final2").innerText=`₹${tp}`;
+    let data=JSON.parse(localStorage.getItem("address"));
+    console.log(data)
+    append(data);
+    function append(data)
+    {
+       let name=document.createElement("p");
+       name.innerText=data.name;
+       let add=document.createElement("p");
+       add.innerText=data.address;
+       let c=document.createElement("p");
+       c.innerText=data.city;
+       let nation=document.createElement("p");
+       nation.innerText=data.country;
+       document.querySelector("#addr").append(name,add,c,nation);
+    }
+    
+</script>

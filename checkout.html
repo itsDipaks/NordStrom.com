@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        #site{
+            position: absolute;
+            left: 170px;
+            top: 30px;
+        }
+        #check_page{
+            display: flex;
+            margin-top: 100px;
+        }
+
+        #basket{
+            
+            width: 40%;
+            margin-left: 20%;
+            
+        }
+        .full{
+            width: 95%;
+            height: 35px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            padding-left: 10px;
+            color: grey;
+        }
+        .half{
+            width:45%;
+            height: 35px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            padding-left: 10px;
+            color: grey;
+
+        }
+        .ln{
+            margin-left: 25px;
+        }
+        #continue{
+            padding: 10px 120px;
+            font-weight: bold;
+            color: white;
+            background-color: #393939;
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+        }
+        #last_pic_box{
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        #order{
+            width: 17%;
+            
+            background-color: #E3E3E3;
+            padding: 10px;
+        }
+        #logo_head{
+            display: flex;
+        }
+        #pic2_box{
+           width: 15%;
+        }
+        #pic2{
+            width: 100%;
+        }
+        #logo_head>p{
+            
+            margin-top: 0px;
+            margin-left: 10px;
+            font-size: 25px;
+            font-family: sans-serif;
+            color: #393939;
+        }
+        .list{
+            display: flex;
+            justify-content: space-between;
+        }
+        #final1,#final2{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin-top: 0px;
+        }
+        #continue:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <img id="site" src="./cart images/site_logo.jpg" alt="">
+    <div id="check_page">
+    <div id="basket">
+        <div id="pic_box">
+            <img src="./cart images/head_checkout.jpg" alt="">
+        </div>
+        <input type="text" placeholder="Email" class="full email">
+        <input type="text" placeholder="First Name" class="half name1">
+        <input type="text" placeholder="Last Name" class="half ln name2">
+        <input type="text" placeholder="Address" class="full add">
+        <input type="text" placeholder="Address 2(Optional)" class="half add_o">
+        <input type="text" placeholder="Postal Code" class="half ln code">
+        <input type="text" placeholder="City" class="half city">
+        <input type="text" placeholder="Region (Optional)" class="half ln region">
+        <input type="number" placeholder="Phone" class="half num">
+        <input type="text" placeholder="Country" class="half ln country">
+        <button id="continue">Continue >></button>
+        <div id="last_pic_box">
+            <img src="./cart images/payment_option.jpg" alt="">
+        </div>
+    </div>
+    <div id="order">
+        <div id="logo_head">
+        <div id="pic2_box">
+            <img id="pic2" src="./cart images/cart_icon.jpg" alt="">
+        </div>
+        <p>Your Order</p>
+        </div>
+        <button id="continue">Continue >></button>
+        <div class="list">
+            <p>Items</p>
+            <p class="total"></p>
+        </div>
+        <div class="list">
+            <p id="final1">Total</p>
+            <p id="final2"></p>
+        </div
+    </div>
+    </div>
+</body>
+</html>
+<script>
+
+    let tp=JSON.parse(localStorage.getItem("Total Price"));
+    document.querySelector(".total").innerText=`₹${tp}`;
+    document.querySelector("#final2").innerText=`₹${tp}`;
+    document.getElementById("continue").addEventListener("click",nextPage);
+    
+    function nextPage()
+    {
+        event.preventDefault();
+        class Address
+        {
+            
+            constructor(n1,n2,n3,n4,n5,n6,n7,n8){
+                this.name=`${n1} ${n2}`;
+                this.address=`${n3} ${n4}`;
+                this.city=n5;
+                this.country=n7;
+                this.phone=n8;
+            }
+            
+
+
+        }
+        let n1=document.querySelector(".name1").value;
+            let n2=document.querySelector(".name2").value;
+            let n3=document.querySelector(".add").value;
+            let n4=document.querySelector(".add_o").value;
+            let n5=document.querySelector(".city").value;
+            let n6=document.querySelector(".region").value;
+            let n7=document.querySelector(".country").value;
+            let n8=document.querySelector(".num").value;
+        let addr=new Address(n1,n2,n3,n4,n5,n6,n7,n8);
+        console.log(addr)
+        localStorage.setItem("address",JSON.stringify(addr))
+        window.location.href="./payment.html";
+    }
+    
+</script>
