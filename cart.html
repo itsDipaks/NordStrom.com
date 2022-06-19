@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag|Nordstorm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        #show_num{
+          display: flex;
+          height: 40px;
+          margin-left: 15%;
+          
+        }
+        #shop_item,#saved_item{
+            border: 1px solid grey;
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            padding:0px 40px;
+        }
+        #shop_item{
+            background-color: #E3E3E3;
+            font-weight: bold;
+        }
+        .p1{
+            font-family: 'Poppins', sans-serif;
+            font-size: 23px;
+        }
+        #home{
+            border: 1px solid grey;
+            width: 18%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 17px;
+            
+            justify-content: center;
+        }
+        #home:hover{
+            background-color:#E3E3E3;
+        }
+        #p21{
+            color: grey;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .p1,#home,#p21,#p31{
+            margin-left: 15%;
+        }
+        #pay_img{
+            display: block;
+        }
+        #p31{
+            display: inline-block;
+        }
+        #p51{
+            display: block;
+            margin-left: 15%;
+        }
+        #p3{
+            display: inline-block;
+        }
+        #p4{
+            display: inline-block;
+        }
+        #p5{
+            display: block;
+        }
+        .normal{
+            margin-left: 15%;
+        }
+        #gift{
+            margin-left: 15%;
+            width: 1%;
+            
+        }
+        .bottom{
+            display: inline-block;
+            
+            margin-left: 0px;
+            margin-top: -20px;
+            margin-left: 4px;
+        }
+        #line1,#line2{
+            width: 60%;
+            margin-left: 15%;
+        }
+        #block{
+
+        }
+        #super{
+            width: 60%;
+            display: flex;
+            margin-left: 15%;
+            justify-content: space-between;
+        }
+        #bag1{
+            width: 40%;
+            
+            
+        }
+        #block{
+            width: 33%;
+            padding-top: 30px;
+        }
+       #block1{
+        width:100%;
+        display: flex;
+        
+        padding-bottom: 14px;
+        justify-content: space-between;
+        border-bottom: 1px solid grey;
+        height: 20px;
+       }
+       #sub1,#sub2{
+        color: #393939;
+        font-size: 18px;
+        
+       }
+        #check_but{
+            width: 100%;
+            height: 48px;
+            color: white;
+            background-color: black;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 18px;
+
+        }
+        #sidebar{
+            width: 20%;
+            position: absolute;
+            top: 120px;
+            right: 3%;
+            border-left: 1px solid #E3E3E3;
+            height: 800px;
+            padding-left: 15px;
+        }
+        #card{
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 30px;
+            
+        }
+        .side_img_box{
+            width: 30%;
+            position: relative;
+            
+        }
+        .side_img{
+            width: 100%;
+            margin-right: 20px;
+            
+            position: relative;
+            
+        }
+        
+        #view_but{
+            position: absolute;
+            bottom: 0px;
+            border: 1px solid black;
+            width: 100%;
+            height: 30px;
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+        
+        .div2{
+            width: 50%;
+            
+            margin-left: 20px;
+            line-height: 5px;
+        }
+        #main{
+           position: absolute;
+           
+           
+        }
+        #pop{
+            position: absolute;
+            width: 50%;
+            height:450px;
+            border: 1px solid green;
+            top: 50px;
+            left: 25%;
+            padding: 30px 70px 30px 30px;
+            background-color: white;
+        }
+        .pa1{
+            margin-left: 0%;
+            margin-top: 0%;
+        }
+        .pa2{
+            width: 40%;
+            font-size: 14px;
+            color: grey;
+        }
+        .pa3{
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        .pa4{
+            border: 1px solid black;
+            width: 25%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: grey;
+        }
+        .b{
+            padding: 15px 25px;
+            color: white;
+            background-color: black;
+            font-size: 10px;
+            margin-top: 30px;
+        }
+        .pa7{
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 20px;
+            color: grey;
+        }
+        .b:hover{
+            background-color: #393939;
+        }
+        #p_div{
+            width: 60%;
+            margin-left: 15%;
+            height: auto;
+            
+            padding: 25px 0px;
+        }
+        #cart{
+            display: flex;
+            margin-bottom: 30px;
+            width: 100%;
+            
+        }
+        #sub_cart1{
+            width: 20%;
+           
+            margin-right: 20px;
+        }
+        #image_pr{
+            width: 100%;
+        }
+        #sub_cart2{
+            width: 65%;
+            
+            
+        }
+        #sub_cart2>div>p{
+            margin: 0px;
+            padding: 0px;
+        }
+        #sub_cart3{
+            
+            width: 12%;
+            display: flex;
+            justify-content: end;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #click_div{
+            width: 35%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            
+        }
+        #click_div>div{
+            color: blueviolet;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h4>Recently viewed </h4>
+        <div id="sidebar_content"></div>
+    </div>
+
+</body>
+</html>
+<script>
+    
+    let cartsdata_arr1=[{imageurl:"./cart images/trial.jpg",
+    name:"Gary Jumpsuit",
+    offprice:"8546.2",
+    price:"10669.2",
+          
+    seller:"Sweaty Betty",
+    type:"Activewear"
+
+  },
+  {
+    imageurl:"./cart images/cart_icon.jpg",
+    name:"Sourav",
+    offprice:"3468",
+    price:"20000",
+    seller:"Gany",
+    type:"Activewear"
+},
+{
+    imageurl:"./cart images/gift_icon.jpg",
+    name:"Smita",
+    offprice:"2090",
+    price:"300000",
+    seller:"Gany",
+    type:"Activewear"
+}
+
+];
+
+localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr1));
+
+
+let cartsdata_arr=JSON.parse(localStorage.getItem("cartsdata"))||[];
+
+
+var save_arr=JSON.parse(localStorage.getItem("Saved Items"))||[];
+console.log(cartsdata_arr)
+  function add()
+  {
+    var sum=0;
+    
+    for(var i=0;i<cartsdata_arr.length;i++)
+    {
+        sum=sum+Number(cartsdata_arr[i].price);
+        
+    }
+    return sum;
+  }
+  let total=add();
+  
+    let x=cartsdata_arr.length;
+    let y=save_arr.length;
+    console.log(x)
+   function add_head(x,y)
+    {
+        
+    let box=document.createElement("div");
+    box.setAttribute("id","show_num");
+    let box1=document.createElement("div");
+    box1.setAttribute("id","shop_item");
+    let box2=document.createElement("div");
+    box2.setAttribute("id","saved_item")
+    box1.innerText=`Shopping Bag (${x})`;
+    box2.innerText=`Saved for Later (${y})`;
+    
+    
+    box2.addEventListener("click",()=>{
+        window.location.href="./saved.html";
+        
+        
+    })
+   
+    box.append(box1,box2);
+    document.querySelector("body").append(box);
+    }
+add_head(x,y);
+ 
+    let show_items=(cartsdata_arr)=>{
+        let p1=document.createElement("p");
+        p1.innerText="Shopping Bag";
+        p1.setAttribute("class","p1");
+        let p21=document.createElement("p");
+        p21.innerText="Items in your bag are not on hold.";
+        p21.setAttribute("class","normal");
+        let gift=document.createElement("img");
+        gift.src="./cart images/gift_icon.jpg";
+        gift.setAttribute("id","gift");
+        let p31=document.createElement("p");
+        p31.innerText="Choose gift options when you check out.";
+        p31.setAttribute("class","normal bottom");
+        let line1=document.createElement("hr");
+        line1.setAttribute("id","line1");
+        let p_div=document.createElement("div");
+        p_div.setAttribute("id","p_div")
+        p_div.innerHTML=null;
+
+        document.querySelector("body").append(p1,p21,gift,p31,line1);
+
+
+        let joint=(cartsdata_arr)=>{
+        cartsdata_arr.forEach((ele,index)=>{
+            let cart=document.createElement("div");
+        cart.setAttribute("id","cart");
+        let img=document.createElement("img");
+        img.setAttribute("id","image_pr")
+        img.src=ele.imageurl;
+        let sub_cart1=document.createElement("div");
+        sub_cart1.setAttribute("id","sub_cart1");
+        sub_cart1.append(img);
+        
+        let sub_cart2=document.createElement("div");
+        sub_cart2.setAttribute("id","sub_cart2");
+        let t=document.createElement("p")
+        t.innerText="NORDSTROM";
+        let t2=document.createElement("p")
+        t2.innerText=ele.name;
+        
+        let t3=document.createElement("p")
+        t3.innerText=ele.seller;
+        let t4=document.createElement("p")
+        t4.innerText=ele.type;
+        
+        
+        let sub_2_p=document.createElement("div");
+        sub_2_p.append(t,t2,t3,t4);
+
+        let press1=document.createElement("div");
+        press1.setAttribute("id","press1");
+        let press2=document.createElement("div");
+        press2.setAttribute("id","press2")
+        press1.innerText="Remove";
+        press1.addEventListener("click",()=>{
+            del(ele,index,p_div);
+            
+        });
+        
+        press2.innerText="Save for later";
+        
+        press2.addEventListener("click",()=>{
+            save(ele,index);
+            
+        })
+        let click_div=document.createElement("div");
+        click_div.setAttribute("id","click_div");
+        click_div.append(press1,press2);
+        sub_cart2.append(sub_2_p,click_div);
+        let sub_cart3=document.createElement("div");
+        sub_cart3.setAttribute("id","sub_cart3");
+        sub_cart3.innerText=`₹${ele.price}`;
+        cart.append(sub_cart1,sub_cart2,sub_cart3);
+        
+        p_div.append(cart);
+        document.querySelector("body").append(p_div);
+        })
+        
+    }
+    joint(cartsdata_arr);
+    let line2=document.createElement("hr");
+       line2.setAttribute("id","line2");
+        
+       let p2=document.createElement("p");
+       p2.setAttribute("id","p2");
+       
+       p2.innerText="Accepted Payment Methods";
+       let pay=document.createElement("img");
+       pay.setAttribute("src","./cart images/pay.jpg");
+       pay.setAttribute("id","pay_img");
+       let p3=document.createElement("p");
+       p3.setAttribute("id","p3");
+       p3.innerText=`Need help? Call 1.888.282.6060 or `;
+       let p4=document.createElement("a");
+       p4.setAttribute("href","file:///C:/Users/soura/OneDrive/Desktop/Nordstorm/NordStrom.com/index.html");
+       p4.setAttribute("id","p4");
+       p4.innerText=` chat with us`;
+       let p5=document.createElement("a");
+       p5.setAttribute("id","p5");
+       p5.setAttribute("href","file:///C:/Users/soura/OneDrive/Desktop/Nordstorm/NordStrom.com/index.html");
+       p5.innerText="Shipping internationally?";
+       p5.addEventListener("click",ship_pop);
+       let bag1=document.createElement("div");
+       bag1.setAttribute("id","bag1");
+       bag1.append(p2,pay,p3,p4,p5);
+        let superBlock=document.createElement("div");
+        superBlock.setAttribute("id","super");
+        let block=document.createElement("div");
+        block.setAttribute("id","block");
+        let sub1=document.createElement("div");
+        sub1.setAttribute("id","sub1");
+        sub1.innerText="Subtotal";
+        let sub2=document.createElement("div");
+        sub2.setAttribute("id","sub2");
+        sub2.innerText=`₹${total}`;
+    
+        let block1=document.createElement("div");
+        block1.setAttribute("id","block1");
+        block1.append(sub1,sub2);
+        let line3=document.createElement("hr");
+        line3.setAttribute("id","line3");
+        let but=document.createElement("button");
+        but.innerText="Check Out";
+        but.setAttribute("id","check_but");
+        but.addEventListener("click",check_out)
+        block.append(block1,but);
+        superBlock.append(bag1,block);
+        document.querySelector("body").append(line2,superBlock);
+    
+        
+        localStorage.setItem("Total Price",JSON.stringify(total));
+        
+
+
+      
+    }
+    let noitem=()=>{
+       
+       let p1=document.createElement("p");
+       p1.setAttribute("class","p1")
+       p1.innerText="Your bag is empty";
+       let div1=document.createElement("div");
+       div1.setAttribute("id","home");
+       div1.innerText="Continue Shopping";
+       let p2=document.createElement("p");
+       p2.setAttribute("id","p2");
+       p2.innerText="Accepted Payment Methods";
+       let pay=document.createElement("img");
+       pay.setAttribute("src","./cart images/pay.jpg");
+       pay.setAttribute("id","pay_img");
+       let p3=document.createElement("p");
+       p3.setAttribute("id","p3");
+       p3.innerText=`Need help? Call 1.888.282.6060 or `;
+       let p4=document.createElement("a");
+       p4.setAttribute("href","file:///C:/Users/soura/OneDrive/Desktop/Nordstorm/NordStrom.com/index.html");
+       p4.setAttribute("id","p4");
+       p4.innerText=` chat with us`;
+       let p5=document.createElement("a");
+       p5.setAttribute("id","p5");
+       p5.setAttribute("href","file:///C:/Users/soura/OneDrive/Desktop/Nordstorm/NordStrom.com/index.html")
+       p5.innerText="Shipping internationally?"
+       let bag1=document.createElement("div");
+       bag1.setAttribute("id","bag1");
+       bag1.append(p2,pay,p3,p4,p5);
+       bag1.style.marginLeft="15%";
+       document.querySelector("body").append(p1,div1,bag1);
+    }
+    
+    
+    let shoppingBag=(x)=>{
+        if(x>0)
+        {
+            show_items(cartsdata_arr);
+        }
+        else if(x==0)
+        {
+            noitem();
+        }
+    }
+    shoppingBag(x);
+    
+    
+    let recent_items=()=>{
+
+        let card=document.createElement("div");
+        card.setAttribute("id","card")
+        let image_card=document.createElement("img");
+        image_card.setAttribute("class","side_img");
+        image_card.setAttribute("src","https://n.nordstrommedia.com/id/sr3/483261fd-5edf-4f05-a269-8c9e3e61bbf8.jpeg?q=45&dpr=2&h=135.8&w=88");
+        let img_box=document.createElement("div");
+        img_box.setAttribute("class","side_img_box");
+        let view_but=document.createElement("button");
+        view_but.innerText="Quick View";
+        view_but.setAttribute("id","view_but");
+        
+        img_box.append(image_card,view_but);
+        let div2=document.createElement("div");
+        div2.setAttribute("class","div2")
+        let pa1=document.createElement("p");
+        let pa2=document.createElement("p");
+        pa1.innerText="Nordstrom";
+        pa2.innerText="₹6548";
+        div2.append(pa1,pa2);
+        card.append(img_box,div2);
+        document.querySelector("#sidebar_content").append(card);
+    }
+    
+    recent_items();
+    function ship_pop(e)
+    {
+       e.preventDefault();
+       let main=document.createElement("div");
+       let pop=document.createElement("div");
+       
+       pop.setAttribute("id","pop");
+       let pa1=document.createElement("p");
+       pa1.setAttribute("class","p1 pa1")
+       pa1.innerText="We ship internationally";
+       let pa2=document.createElement("p");
+       pa2.setAttribute("class","pa2")
+       pa2.innerText="Nordstrom ships to over 200 countries/regions worldwide through our delivery partner Borderfree.";
+       let pa3=document.createElement("p");
+       pa3.setAttribute("class","pa3")
+       pa3.innerText="Ship to";
+       let pa4=document.createElement("div");
+       pa4.setAttribute("class","pa4")
+       pa4.innerText="India";
+       let pa5=document.createElement("p");
+       pa5.setAttribute("class","pa3")
+       pa5.innerText="Shop in";
+       let pa6=document.createElement("div");
+       pa6.setAttribute("class","pa4")
+       pa6.innerText="Indian Rupee(INR)";
+       let b1=document.createElement("button");
+       b1.setAttribute("class","b");
+       b1.innerText="Save";
+       let pa7=document.createElement("div");
+       pa7.setAttribute("class","pa7");
+       pa7.innerText="Cancel";
+       
+       pop.append(pa1,pa2,pa3,pa4,pa5,pa6,b1,pa7);
+       
+       main.append(pop);
+       document.querySelector("body").append(main);
+    }
+    function check_out(e){
+      e.preventDefault();
+      window.location.href="./checkout.html";
+    }
+    function del(ele,index,p_div)
+    {
+       console.log(ele)
+       console.log(index)
+      
+       
+       
+       
+       cartsdata_arr.splice(index,1);
+       
+        localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr));
+        
+        console.log(cartsdata_arr);
+        
+        
+        window.location.reload()
+    }
+    
+    function save(ele,index)
+   {
+       event.preventDefault();
+       save_arr.push(ele);
+       
+       localStorage.setItem("Saved Items",JSON.stringify(save_arr));
+       
+       window.location.reload();
+   }
+   </script>
