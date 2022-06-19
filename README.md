@@ -1,5 +1,6 @@
 # NordStrom.com
 Nordstrom.com
+
 Nordstrom.com is a new kind of shopping comparison site that offers the most comprehensive shopping experience on the web. It is the best collection of the stores you can't live without, and the brands and products you love - all in one place.
 
 Languages that we have used in this project.
