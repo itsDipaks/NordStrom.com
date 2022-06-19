@@ -323,7 +323,7 @@ let cartsdata_arr=JSON.parse(localStorage.getItem("cartsdata"))||[];
 
 
 var save_arr=JSON.parse(localStorage.getItem("Saved Items"))||[];
-console.log(save_arr)
+console.log(cartsdata_arr)
   function add()
   {
     var sum=0;
@@ -339,7 +339,7 @@ console.log(save_arr)
   
     let x=cartsdata_arr.length;
     let y=save_arr.length;
-    console.log(y)
+    console.log(x)
    function add_head(x,y)
     {
         
@@ -616,18 +616,18 @@ add_head(x,y);
     {
        console.log(ele)
        console.log(index)
-       event.preventDefault();
+      
        
        
-       let u_cartsdata_arr=JSON.parse(localStorage.getItem("u_cartsdata"))||[];
+       
        cartsdata_arr.splice(index,1);
        
-        localStorage.setItem("u_cartsdata",JSON.stringify(cartsdata_arr));
+        localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr));
         
-        console.log(u_cartsdata_arr);
+        console.log(cartsdata_arr);
         
-        show_items(u_cartsdata_arr);
         
+        window.location.reload()
     }
     
     function save(ele,index)
