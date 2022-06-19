@@ -1,17 +1,17 @@
 #Profilepage{
 
-      width:90%;
+      width:100%;
       margin: auto;
       border: 1px solid #000;
       height: 900px;
-      display: flex;
+      /* display: flex; */
       position: relative;
       top: 45px;
       justify-content: space-between;
 }
 
 #leftbar{
-      width:20%;
+      width:100%;
       /* border: 1px solid #000; */
    
 

@@ -8,13 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <style>
+<link rel="stylesheet" href="Styles/navbar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="Styles/footer.css">
+  <style>
         #show_num{
           display: flex;
           height: 40px;
           margin-left: 15%;
           
         }
+     
         #shop_item,#saved_item{
             border: 1px solid grey;
             display: flex;
@@ -32,7 +36,7 @@
         }
         #home{
             border: 1px solid grey;
-            width: 18%;
+            width: 58%;
             height: 50px;
             display: flex;
             align-items: center;
@@ -92,13 +96,13 @@
 
         }
         #super{
-            width: 60%;
+            width: 65%;
             display: flex;
             margin-left: 15%;
             justify-content: space-between;
         }
         #bag1{
-            width: 40%;
+            width: 60%;
             
             
         }
@@ -133,11 +137,12 @@
         #sidebar{
             width: 20%;
             position: absolute;
-            top: 120px;
+            top: 101px;
             right: 3%;
             border-left: 1px solid #E3E3E3;
             height: 800px;
             padding-left: 15px;
+            margin-top: 20px;
         }
         #card{
             display: flex;
@@ -169,7 +174,7 @@
         }
         
         .div2{
-            width: 50%;
+            width: 100%;
             
             margin-left: 20px;
             line-height: 5px;
@@ -250,7 +255,7 @@
             width: 100%;
         }
         #sub_cart2{
-            width: 65%;
+            width: 45%;
             
             
         }
@@ -267,7 +272,7 @@
             font-weight: bold;
         }
         #click_div{
-            width: 35%;
+            width: 55%;
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
@@ -277,59 +282,76 @@
             color: blueviolet;
             cursor: pointer;
         }
+        nav {
+  width: 100%;
+  height: 110px;
+  /* border: 1px solid #000; */
+  /* position:fixed; */
+  top: 0px;
+  z-index: 999;
+  background-color: white;
+}
+#append{
+    /* border: 1px solid #000; */
+    margin-top: 50px;;
+    position: relative;
+}
     </style>
 </head>
 <body>
-    <div id="sidebar">
-        <h4>Recently viewed </h4>
-        <div id="sidebar_content"></div>
-    </div>
-
+    <div id="navbar"></div>
+    <div id="append"></div>
+<div id="footer"></div>
+</div>
 </body>
 </html>
-<script>
-    
-    let cartsdata_arr1=[{imageurl:"./cart images/trial.jpg",
-    name:"Gary Jumpsuit",
-    offprice:"8546.2",
-    price:"10669.2",
+<script type="module">
+    import { navbar } from "../Components/navbar.js";
+document.getElementById("navbar").innerHTML =navbar();
+
+//     let cartsdata_arr1=[{imageurl:"./cart images/trial.jpg",
+//     name:"Gary Jumpsuit",
+//     offprice:"8546.2",
+//     price:"10669.2",
           
-    seller:"Sweaty Betty",
-    type:"Activewear"
+//     seller:"Sweaty Betty",
+//     type:"Activewear"
 
-  },
-  {
-    imageurl:"./cart images/cart_icon.jpg",
-    name:"Sourav",
-    offprice:"3468",
-    price:"20000",
-    seller:"Gany",
-    type:"Activewear"
-},
-{
-    imageurl:"./cart images/gift_icon.jpg",
-    name:"Smita",
-    offprice:"2090",
-    price:"300000",
-    seller:"Gany",
-    type:"Activewear"
-}
+//   },
+//   {
+//     imageurl:"./cart images/cart_icon.jpg",
+//     name:"Sourav",
+//     offprice:"3468",
+//     price:"20000",
+//     seller:"Gany",
+//     type:"Activewear"
+// },
+// {
+//     imageurl:"./cart images/gift_icon.jpg",
+//     name:"Smita",
+//     offprice:"2090",
+//     price:"300000",
+//     seller:"Gany",
+//     type:"Activewear"
+// }
 
-];
+// ];
 
-localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr1));
+// localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr1));
 
+
+import { footer } from "../Components/footer.js";
+
+document.getElementById("footer").innerHTML =footer();
 
 let cartsdata_arr=JSON.parse(localStorage.getItem("cartsdata"))||[];
-
 
 var save_arr=JSON.parse(localStorage.getItem("Saved Items"))||[];
 console.log(cartsdata_arr)
   function add()
   {
     var sum=0;
-    
-    for(var i=0;i<cartsdata_arr.length;i++)
+        for(var i=0;i<cartsdata_arr.length;i++)
     {
         sum=sum+Number(cartsdata_arr[i].price);
         
@@ -343,8 +365,7 @@ console.log(cartsdata_arr)
     console.log(x)
    function add_head(x,y)
     {
-        
-    let box=document.createElement("div");
+            let box=document.createElement("div");
     box.setAttribute("id","show_num");
     let box1=document.createElement("div");
     box1.setAttribute("id","shop_item");
@@ -353,15 +374,19 @@ console.log(cartsdata_arr)
     box1.innerText=`Shopping Bag (${x})`;
     box2.innerText=`Saved for Later (${y})`;
     
-    
     box2.addEventListener("click",()=>{
+        window.location.href="./saved.html";
+        
+        
+    })
+    box1.addEventListener("click",()=>{
         window.location.href="./saved.html";
         
         
     })
    
     box.append(box1,box2);
-    document.querySelector("body").append(box);
+    document.querySelector("#append").append(box);
     }
 add_head(x,y);
  
@@ -384,7 +409,7 @@ add_head(x,y);
         p_div.setAttribute("id","p_div")
         p_div.innerHTML=null;
 
-        document.querySelector("body").append(p1,p21,gift,p31,line1);
+        document.querySelector("#append").append(p1,p21,gift,p31,line1);
 
 
         let joint=(cartsdata_arr)=>{
@@ -440,7 +465,7 @@ add_head(x,y);
         cart.append(sub_cart1,sub_cart2,sub_cart3);
         
         p_div.append(cart);
-        document.querySelector("body").append(p_div);
+        document.querySelector("#append").append(p_div);
         })
         
     }
@@ -492,7 +517,7 @@ add_head(x,y);
         but.addEventListener("click",check_out)
         block.append(block1,but);
         superBlock.append(bag1,block);
-        document.querySelector("body").append(line2,superBlock);
+        document.querySelector("#append").append(line2,superBlock);
     
         
         localStorage.setItem("Total Price",JSON.stringify(total));
@@ -608,7 +633,7 @@ add_head(x,y);
        pop.append(pa1,pa2,pa3,pa4,pa5,pa6,b1,pa7);
        
        main.append(pop);
-       document.querySelector("body").append(main);
+       document.querySelector("#sidebar").append(main);
     }
     function check_out(e){
       e.preventDefault();
@@ -640,5 +665,10 @@ add_head(x,y);
        localStorage.setItem("Saved Items",JSON.stringify(save_arr));
        
        window.location.reload();
+   }
+
+
+   function click(){
+    window.location.href="cart.html"
    }
    </script>

@@ -5,25 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <style>
+    <link rel="stylesheet" href="Styles/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+   <style>
         #site{
             position: absolute;
-            left: 170px;
+            /* left: 170px; */
             top: 30px;
+            /* border: 1px solid #000; */
         }
         #check_page{
             display: flex;
-            margin-top: 100px;
+            margin-top: 30px;
+            /* border: 1px solid #000; */
+            justify-content: space-evenly;
+            width: 90%;
+            margin: auto;
         }
 
         #basket{
             
             width: 40%;
-            margin-left: 20%;
+            /* margin-left: 20%; */
+            margin: auto;
             
         }
         .full{
-            width: 95%;
+            width: 100%;
             height: 35px;
             margin-bottom: 25px;
             border-radius: 5px;
@@ -50,6 +59,7 @@
             color: white;
             background-color: #393939;
             display: block;
+            /* border: 1px solid #000; */
             margin: auto;
             border-radius: 5px;
         }
@@ -58,10 +68,11 @@
             margin-top: 30px;
         }
         #order{
-            width: 17%;
-            
+            width: 25%;
+            /* border: 1px solid #000; */
             background-color: #E3E3E3;
             padding: 10px;
+            height: auto;
         }
         #logo_head{
             display: flex;
@@ -82,6 +93,7 @@
         }
         .list{
             display: flex;
+            margin-top: 10px;
             justify-content: space-between;
         }
         #final1,#final2{
@@ -93,10 +105,19 @@
         #continue:hover{
             background-color: black;
         }
+        #payment{
+          margin-top: 30px;
+        }
     </style>
 </head>
 <body>
-    <img id="site" src="./cart images/site_logo.jpg" alt="">
+
+
+<div id="navbar"></div>
+
+
+    <!-- <img id="site" src="./cart images/site_logo.jpg" alt=""> -->
+    <div id="payment">
     <div id="check_page">
     <div id="basket">
         <div id="pic_box">
@@ -135,9 +156,19 @@
         </div
     </div>
     </div>
+</div>
+    <div id="footer"></div>
 </body>
 </html>
-<script>
+<script type="module">
+
+import { navbar } from "../Components/navbar.js";
+document.getElementById("navbar").innerHTML =navbar();
+
+        
+import { footer } from "../Components/footer.js";
+document.getElementById("footer").innerHTML =footer();
+
 
     let tp=JSON.parse(localStorage.getItem("Total Price"));
     document.querySelector(".total").innerText=`₹${tp}`;

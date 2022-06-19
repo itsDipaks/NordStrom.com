@@ -16,10 +16,10 @@ function navbar(){
         
           <h4 id="name1"><a id="name" href="profile.html">Please Create Account</a></h4>
          <hr>
-               <a href=""><i class="fa-solid fa-bag-shopping"></i><span>Purcheses</span></a>
-               <a href=""> <i class="fa-solid fa-heart"></i><span>Wish List</span></a>
+               <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span>Purcheses</span></a>
+               <a href="saved.html"> <i class="fa-solid fa-heart"></i><span>Wish List</span></a>
                <a href=""><i class="fa-solid fa-truck-fast"></i><span>Shipping Address</span></a>
-               <a href=""><i class="fa-solid fa-credit-card"></i><span>Payment Method</span></a> 
+               <a href="payment.html"><i class="fa-solid fa-credit-card"></i><span>Payment Method</span></a> 
                <hr>
                <a href=""><i class="fa-solid fa-unlock"></i><span>Password & Personal Info</span></a>
                <a href=""><i class="fa-solid fa-envelope"></i><span>Email & Mail Prefearances</span></a>
