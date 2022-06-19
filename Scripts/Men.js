@@ -2,6 +2,9 @@ import { navbar } from "../Components/navbar.js";
 document.getElementById("navbar").innerHTML =navbar();
 
 
+import { footer } from "../Components/footer.js";
+document.getElementById("footer").innerHTML =footer();
+
 
 let men=[
       {
@@ -196,6 +199,8 @@ let append=()=>{
 
             let btn=document.createElement("button")
             btn.innerText="Add to Cart"
+      
+            btn.setAttribute("id","btn")
             btn.addEventListener("click",function(){
                   addtocart_fun(el)
             })

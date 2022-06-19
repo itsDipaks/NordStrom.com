@@ -8,7 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="Styles/navbarforall.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <style>
+   <link rel="stylesheet" href="Styles/footer.css">
+   <style>
  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');
         #container{
@@ -113,12 +114,24 @@
         <div>Don't have an account?
             <a>Sign Up</a></div>
     </div>
+
+    <div id="footer"></div>
 </body>
 
 <script type="module">
 
 import { navbarlog } from "../Components/navbar.js";
 document.getElementById("navbar").innerHTML =navbarlog();
+
+
+
+import { footer } from "../Components/footer.js";
+
+document.getElementById("footer").innerHTML =footer();
+
+
+
+
 
     document.querySelector("#basicForm").addEventListener("submit", loginForm);
     

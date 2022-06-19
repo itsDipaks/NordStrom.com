@@ -7,16 +7,18 @@
       <title>Document</title>
       <link rel="stylesheet" href="Styles/navbar.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-     <style>
-       #container{
+    <link rel="stylesheet" href="Styles/footer.css">
+    <style>
+             #container{
           display: grid;
           grid-template-columns: repeat(4,1fr);
-          width: 95%;
-          grid-template-rows: repeat(4,480px);  
+          width: 93%;
+          grid-template-rows: repeat(5,500px);  
           /* border: 1px solid #000; */
-          gap: 5px;
+          gap: 15px;
+          /* padding: 20px; */
           margin: auto;
-          top:180px;
+          top:10px;
           position: relative;
       }
       #div{
@@ -24,12 +26,12 @@
             /* border: 1px sol/id #000; */
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             height: 93%;
-            padding: 10px;
+            padding: 20px;
       }
       #imgdiv{
             /* border: 1px solid #000; */
             width: 90%;
-            height: 70%;
+            height: 65%;
             margin: auto;
            
       }
@@ -40,21 +42,33 @@
       }
 p{
       margin: 0px;
+      margin-top: 5px;
 }
 h3{
       margin: 0px;
       text-align: center;
-      margin-top: 5px;
+      margin-top: 15px;
 
 }
 h4{
       margin: 0px;
       margin-bottom: 5px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-button{
-      margin-left: 20px;
-      margin-top: 10px;
+#btn{
+      margin-left: 30%;
+      margin-top: 20px;
+      height: 30px;
+      width: 100px;
+      color: rgb(0, 0, 0);
+      border-radius: 10px;
+      border: 1px solid rgb(8, 114, 0);
       /* margin: auto; */
+}
+#btn:hover{
+      background-color: green;
+      color: white;
+      
 }
      </style>
 </head>
@@ -63,6 +77,8 @@ button{
 
       </nav>
       <div id="container"></div>
+
+      <div id="footer"></div>
 </body>
 </html>
 <script type="module" src="Scripts/Men.js"></script>

@@ -8,7 +8,8 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="Styles/navbarforall.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
-    <style>
+  <link rel="stylesheet" href="Styles/footer.css">
+  <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cinzel&family=Fjalla+One&family=Lobster&family=Roboto&display=swap');
       #container{
@@ -16,7 +17,7 @@
             border-radius: 15px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             height: 550px;
-            width: 35%;
+            width: 33%;
             padding-top: 5px;
             margin: auto;
             position: relative;
@@ -132,10 +133,17 @@
             <div id="button">
             <button id = "button" onclick ="Next()">Next</button></div>
         </form>
+    </div>
+        <div id="footer"></div>
         
 </body>
 
-<script >
+<script type="module" >
+    
+import { footer } from "../Components/footer.js";
+
+document.getElementById("footer").innerHTML =footer();
+
 
 // import { navbar, navbarlog } from "../Components/navbar.js";
 
