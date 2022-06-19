@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordstrom Your Account</title>
+    <style>
+        #main{
+            display: flex;
+        }
+        #leftbar{
+            
+            width: 15%;
+            margin-left: 10%;
+        }
+     .p_menu{
+        display: flex;
+     }
+     .p_menu:hover{
+        background-color: #E3E3E3;
+     }
+     .p_icon_menu{
+        margin-right: 10px;
+     }
+     .menu_para>p{
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+     }
+     .bag{
+        margin-left: 19px;
+     }
+     .heart{
+        margin-left:27px ;
+     }
+     .shift{
+        margin-left: 25px;
+     }
+     .l9{
+        width: 90%;
+     }
+     #container{
+        
+        width: 75%;
+        height: 870px;
+        background-color: #E3E3E3;
+        padding:20px;
+     }
+     #page{
+        
+        width: 85%;
+        height: 94%;
+        background-color: white;
+        padding: 25px;
+     }
+     #purchase{
+        display: inline-block;
+     }
+     #time{
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid grey;
+        margin: 10px;
+     }
+     #shop{
+        display: inline-block;
+        border: 1px solid grey;
+        padding: 10px 20px;
+     }
+     #shop:hover{
+        background-color: #E3E3E3;
+        border: none;
+        cursor: pointer;
+     }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div id="leftbar">
+        <div class="ac_box"><img src="./cart images/account.jpg"></div>
+        <div id="p_menu1" class="p_menu">
+        <div class="p_icon_menu bag"><img src="./cart images/purchase_icon.jpg" ></div>
+        <div class="menu_para">
+            <p>Purchases</p>
+            <p>Track packages,start returns & more</p>
+        </div>
+        </div>
+        <div id="p_menu2" class="p_menu">
+        <div class="p_icon_menu heart"><img src="./cart images/wished_item.jpg"></div>
+        <div class="menu_para">
+            <p>Wish Lists</p>
+            <p>Create,manage & share lists</p>
+        </div>
+        
+        </div>
+        <div id="p_menu3" class="p_menu">
+        <div class="p_icon_menu bag shift"><img src="./cart images/rewards_icon.jpg" ></div>
+        <div class="menu_para">
+            <p>The Nordy Club Rewards</p>
+            <p>Learn more or join now</p>
+        </div>
+        </div>
+        <hr class="l9">
+        <div id="p_menu4" class="p_menu">
+        <div class="p_icon_menu bag shift"><img src="./cart images/ship_icon.jpg" ></div>
+        <div class="menu_para">
+            <p>Shipping Addresses</p>
+            <p>Add an address</p>
+        </div>
+        </div>
+        <div id="p_menu5" class="p_menu">
+        <div class="p_icon_menu bag shift"><img src="./cart images/pay_icon.jpg" ></div>
+        <div class="menu_para">
+            <p>Payment Methods</p>
+            <p>Add a payment method</p>
+        </div>
+        </div>
+        <hr class="l9">
+    </div>
+    <div id="container">
+         <div id="page">
+              
+         </div>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+   
+    let card=document.createElement("div");
+   let head=document.createElement("p");
+   head.innerText="Purchases";
+   let purchase=document.createElement("p");
+   purchase.setAttribute("id","purchase");
+   purchase.innerText=`0 purchases in`;
+   let sel=document.createElement("div");
+   sel.setAttribute("id","time");
+   sel.innerText="past year";
+   let p1=document.createElement("p");
+   p1.innerText="You have no purchase in this time period.";
+   let shop_box=document.createElement("div");
+   shop_box.setAttribute("id","shop");
+   shop_box.innerText="Shop Now";
+   card.append(head,purchase,sel,p1,shop_box);
+   document.getElementById("page").append(card);
+   
+</script>

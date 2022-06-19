@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Bag|Nordstorm</title>
+    <title>Saved Products|Nordstorm</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -143,7 +143,6 @@
             display: flex;
             cursor: pointer;
             margin-bottom: 30px;
-            
         }
         .side_img_box{
             width: 30%;
@@ -237,13 +236,12 @@
         }
         #cart{
             display: flex;
-            margin-bottom: 30px;
-            width: 100%;
             
+            width: 100%;
         }
         #sub_cart1{
             width: 20%;
-           
+            
             margin-right: 20px;
         }
         #image_pr{
@@ -277,6 +275,12 @@
             color: blueviolet;
             cursor: pointer;
         }
+        #saved_item{
+            background-color:#E3E3E3;
+        }
+        #shop_item{
+            background-color: white;
+        }
     </style>
 </head>
 <body>
@@ -288,7 +292,6 @@
 </body>
 </html>
 <script>
-    
     let cartsdata_arr1=[{imageurl:"./cart images/trial.jpg",
     name:"Gary Jumpsuit",
     offprice:"8546.2",
@@ -317,13 +320,11 @@
 
 ];
 
-localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr1));
-
 let cartsdata_arr=JSON.parse(localStorage.getItem("cartsdata"))||[];
-
-
-var save_arr=JSON.parse(localStorage.getItem("Saved Items"))||[];
+let save_arr=JSON.parse(localStorage.getItem("Saved Items"))||[];
 console.log(save_arr)
+
+
   function add()
   {
     var sum=0;
@@ -352,24 +353,21 @@ console.log(save_arr)
     box1.innerText=`Shopping Bag (${x})`;
     box2.innerText=`Saved for Later (${y})`;
     
-    
-    box2.addEventListener("click",()=>{
-        window.location.href="./saved.html";
-        
-        
+    box1.addEventListener("click",()=>{
+       
+        window.location.href="./cart.html";
     })
-   
     box.append(box1,box2);
     document.querySelector("body").append(box);
     }
 add_head(x,y);
  
-    let show_items=(cartsdata_arr)=>{
+    let show_items=(save_arr)=>{
         let p1=document.createElement("p");
-        p1.innerText="Shopping Bag";
+        p1.innerText="Saved Bag";
         p1.setAttribute("class","p1");
         let p21=document.createElement("p");
-        p21.innerText="Items in your bag are not on hold.";
+        p21.innerText="Items in this bag are saved for future purchase.";
         p21.setAttribute("class","normal");
         let gift=document.createElement("img");
         gift.src="./cart images/gift_icon.jpg";
@@ -381,13 +379,13 @@ add_head(x,y);
         line1.setAttribute("id","line1");
         let p_div=document.createElement("div");
         p_div.setAttribute("id","p_div")
-        p_div.innerHTML=null;
+
 
         document.querySelector("body").append(p1,p21,gift,p31,line1);
 
 
-        let joint=(cartsdata_arr)=>{
-        cartsdata_arr.forEach((ele,index)=>{
+        let joint=(save_arr)=>{
+        save_arr.forEach((ele,index)=>{
             let cart=document.createElement("div");
         cart.setAttribute("id","cart");
         let img=document.createElement("img");
@@ -419,14 +417,14 @@ add_head(x,y);
         press2.setAttribute("id","press2")
         press1.innerText="Remove";
         press1.addEventListener("click",()=>{
-            del(ele,index,p_div);
+            del(ele,index);
             
         });
         
-        press2.innerText="Save for later";
+        press2.innerText="Move to bag";
         
         press2.addEventListener("click",()=>{
-            save(ele,index);
+            move(ele,index);
             
         })
         let click_div=document.createElement("div");
@@ -443,7 +441,7 @@ add_head(x,y);
         })
         
     }
-    joint(cartsdata_arr);
+    joint(save_arr);
     let line2=document.createElement("hr");
        line2.setAttribute("id","line2");
         
@@ -471,25 +469,8 @@ add_head(x,y);
        bag1.append(p2,pay,p3,p4,p5);
         let superBlock=document.createElement("div");
         superBlock.setAttribute("id","super");
-        let block=document.createElement("div");
-        block.setAttribute("id","block");
-        let sub1=document.createElement("div");
-        sub1.setAttribute("id","sub1");
-        sub1.innerText="Subtotal";
-        let sub2=document.createElement("div");
-        sub2.setAttribute("id","sub2");
-        sub2.innerText=`₹${total}`;
-        let block1=document.createElement("div");
-        block1.setAttribute("id","block1");
-        block1.append(sub1,sub2);
-        let line3=document.createElement("hr");
-        line3.setAttribute("id","line3");
-        let but=document.createElement("button");
-        but.innerText="Check Out";
-        but.setAttribute("id","check_but");
-        but.addEventListener("click",check_out)
-        block.append(block1,but);
-        superBlock.append(bag1,block);
+        
+        superBlock.append(bag1);
         document.querySelector("body").append(line2,superBlock);
     
         
@@ -535,7 +516,7 @@ add_head(x,y);
     let shoppingBag=(x)=>{
         if(x>0)
         {
-            show_items(cartsdata_arr);
+            show_items(save_arr);
         }
         else if(x==0)
         {
@@ -546,7 +527,6 @@ add_head(x,y);
     
     
     let recent_items=()=>{
-
         let card=document.createElement("div");
         card.setAttribute("id","card")
         let image_card=document.createElement("img");
@@ -612,30 +592,26 @@ add_head(x,y);
       e.preventDefault();
       window.location.href="./checkout.html";
     }
-    function del(ele,index,p_div)
+    function del(ele,index)
     {
        console.log(ele)
        console.log(index)
        event.preventDefault();
-       
-       
-       let u_cartsdata_arr=JSON.parse(localStorage.getItem("u_cartsdata"))||[];
        cartsdata_arr.splice(index,1);
-       
-        localStorage.setItem("u_cartsdata",JSON.stringify(cartsdata_arr));
         
-        console.log(u_cartsdata_arr);
+        localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr));
+        console.log(cartsdata_arr);
         
-        show_items(u_cartsdata_arr);
+        
         
     }
     
-    function save(ele,index)
+    function move(ele,index)
    {
        event.preventDefault();
-       save_arr.push(ele);
+       cartsdata_arr.push(ele);
        
-       localStorage.setItem("Saved Items",JSON.stringify(save_arr));
+       localStorage.setItem("cartsdata",JSON.stringify(cartsdata_arr));
        
        window.location.reload();
    }
