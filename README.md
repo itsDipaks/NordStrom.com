@@ -26,7 +26,7 @@ Nordstrom.com is a new kind of shopping comparison site that offers the most com
 - After successfull transaction they can see their payment details at afterpaymentpage.
 ## Homepage
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img height="250" width="1000" align="center" src="./gitprofile.png" alt="itsdipaks" />
 
 ## Signup/Sign In pages
 
