@@ -32,7 +32,7 @@ Nordstrom.com is a new kind of shopping comparison site that offers the most com
 
 ## Signup/Sign In pages
 
-<img height="550" width="1000" align="center" src="./redmeimges/signin.png" alt="itsdipaks" />
+<img width="1000" align="center" src="./redmeimges/signin.png" alt="itsdipaks" />
 <img height="550" width="1000" align="center" src="./redmeimges/sighnup.png" alt="itsdipaks" />
 
 ## Checkout-Add to Cart
