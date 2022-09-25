@@ -26,20 +26,20 @@ Nordstrom.com is a new kind of shopping comparison site that offers the most com
 - After successfull transaction they can see their payment details at afterpaymentpage.
 ## Homepage
 
-<img height="250" width="1000" align="center" src="./redmeimges/H.png" alt="itsdipaks" />
-<img height="250" width="1000" align="center" src="./redmeimges/h1.png" alt="itsdipaks" />
-<img height="250" width="1000" align="center" src="./redmeimges/h2.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/H.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/h1.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/h2.png" alt="itsdipaks" />
 
 ## Signup/Sign In pages
 
-<img height="250" width="1000" align="center" src="./redmeimges/signin.png" alt="itsdipaks" />
-<img height="250" width="1000" align="center" src="./redmeimges/sighnup.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/signin.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/sighnup.png" alt="itsdipaks" />
 
 ## Checkout-Add to Cart
 
-<img height="250" width="1000" align="center" src="./redmeimges/addtocart.png" alt="itsdipaks" />
-<img height="250" width="1000" align="center" src="./redmeimges/proceesd.png" alt="itsdipaks" />
-<img height="250" width="1000" align="center" src="./redmeimges/payment.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/addtocart.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/proceesd.png" alt="itsdipaks" />
+<img height="550" width="1000" align="center" src="./redmeimges/payment.png" alt="itsdipaks" />
 
 
 
