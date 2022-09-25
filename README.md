@@ -6,10 +6,10 @@ Nordstrom.com is a new kind of shopping comparison site that offers the most com
 
 ## Contributors
 
-- [Abhishekh Rawat](https://www.github.com/octokatherine)
-- [Dipak Pawar](https://www.github.com/octokatherine)
-- [Sourav Kumar Sinha](https://www.github.com/octokatherine)
-- [Shivaji Jadhav](https://www.github.com/octokatherine)
+- [Abhishekh Rawat](https://www.github.com/abjishekhrawat)
+- [Dipak Pawar](https://github.com/itsDipaks)
+- [Sourav Kumar Sinha](https://github.com/Sourav9934413639)
+- [Shivaji Jadhav](https://www.github.com/shivajijadhav)
 
 
 ## Features
@@ -38,6 +38,7 @@ Nordstrom.com is a new kind of shopping comparison site that offers the most com
 ## Checkout-Add to Cart
 
 <img height="550" width="1000" align="center" src="./redmeimges/addtocart.png" alt="itsdipaks" />
+</br
 <img height="550" width="1000" align="center" src="./redmeimges/proceesd.png" alt="itsdipaks" />
 <img height="550" width="1000" align="center" src="./redmeimges/payment.png" alt="itsdipaks" />
 
