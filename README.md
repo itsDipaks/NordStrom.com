@@ -41,5 +41,8 @@ Nordstrom.com is a new kind of shopping comparison site that offers the most com
 <img height="550" width="1000" align="center" src="./redmeimges/proceesd.png" alt="itsdipaks" />
 <img height="550" width="1000" align="center" src="./redmeimges/payment.png" alt="itsdipaks" />
 
+## Acknowledgements
+
+- [Masai School](https://www.masaischool.com/)
 
 
